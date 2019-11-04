@@ -25,7 +25,7 @@ namespace Amtskalender
 
         private List<BindingList<Outlook.AppointmentItem>> BindingLists = new List<BindingList<Outlook.AppointmentItem>>();
         private List<ListBox> RecipientListboxes = new List<ListBox>();
-        private Outlook.MAPIFolder DefaultCalendar = Globals.ThisAddIn.Application.Session.GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
+        private Outlook.MAPIFolder DefaultCalendar = Globals.ThisAddIn.Calendars.GetDefault();
 
 
         public DlgCategorize()
@@ -93,7 +93,15 @@ namespace Amtskalender
 
             // populize calendar list
             foreach (Outlook.MAPIFolder Folder in Globals.ThisAddIn.Calendars.GetAll()) Calendars.Add(Folder);
-            CalendarList.SelectedItem = DefaultCalendar;
+            //   CalendarList.SelectedItem = DefaultCalendar;
+            
+            foreach (Outlook.MAPIFolder Item in CalendarList.Items)
+            {
+                if (Item.Name == DefaultCalendar.Name && Item.Store.DisplayName == DefaultCalendar.Store.DisplayName)
+                {
+                    CalendarList.SelectedItem = Item;
+                }
+            }
         }
 
         private void LoadItems()

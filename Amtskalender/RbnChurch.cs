@@ -22,5 +22,10 @@ namespace Amtskalender
         {
             Globals.ThisAddIn.Categorize();
         }
+
+        private void button3_Click_1(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.DeleteAllBirthdays();
+        }
     }
 }

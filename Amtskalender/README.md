@@ -122,3 +122,11 @@ Benutzer auf eigene Gefahr verwendet.
 
 ### Aktuelle Roadmap
 - [ ] Automatische Kategorisierung nach Regeln
+
+## Danke
+Das Installationsprogramm zum Addin wurde mit Daniel Kraus' ausgezeichnetem [VstoAddinInstaller](https://github.com/bovender/VstoAddinInstaller) erstellt.
+
+Die Icons auf der Symbolleiste stammen von  [freepik](https://www.flaticon.com/authors/freepik), [srip](https://www.flaticon.com/authors/srip), [Smashicons](https://www.flaticon.com/authors/smashicon) auf [Flaticon](https://www.flaticon.com).
+
+## Lizenz
+Dieses Addin wird unter der GNU GPLv3-Lizenz angeboten. N�here Informationen dazu finden sich in der Datei [LICENSE](LICENSE). Ausf�hrliche deutschsprachige Lizenzinformationen finden sich [hier](http://www.gnu.de/documents/gpl.de.html).

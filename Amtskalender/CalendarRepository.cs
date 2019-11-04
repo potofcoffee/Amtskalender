@@ -10,6 +10,11 @@ namespace Amtskalender
     public class CalendarRepository
     {
 
+        public Outlook.MAPIFolder GetDefault()
+        {
+            return Globals.ThisAddIn.Application.GetNamespace("mapi").GetDefaultFolder(Outlook.OlDefaultFolders.olFolderCalendar);
+        }
+
         public List<Outlook.MAPIFolder> GetAll()
         {
             List<Outlook.MAPIFolder> Folders = new List<Outlook.MAPIFolder>();

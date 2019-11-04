@@ -93,7 +93,15 @@ namespace Amtskalender
         /// </summary>
         public void ShowRules()
         {
+        }
 
+        /// <summary>
+        /// Delete all birthdays from default calendar
+        /// </summary>
+        public void DeleteAllBirthdays()
+        {
+            Calendar DefaultCalendar = new Calendar(Calendars.GetDefault());
+            DefaultCalendar.DeleteBirthdays();
         }
 
         #region Von VSTO generierter Code

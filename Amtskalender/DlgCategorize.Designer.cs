@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMonthNext = new System.Windows.Forms.Button();
+            this.btnMonthPrev = new System.Windows.Forms.Button();
             this.ReferenceDate = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.CalendarList = new System.Windows.Forms.ComboBox();
@@ -50,8 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.SourceItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnMonthPrev = new System.Windows.Forms.Button();
-            this.btnMonthNext = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SourceItemsBindingSource)).BeginInit();
@@ -65,12 +65,32 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.CalendarList);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(24, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(997, 56);
+            this.groupBox2.Size = new System.Drawing.Size(1009, 56);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datenquelle";
+            // 
+            // btnMonthNext
+            // 
+            this.btnMonthNext.Location = new System.Drawing.Point(722, 19);
+            this.btnMonthNext.Name = "btnMonthNext";
+            this.btnMonthNext.Size = new System.Drawing.Size(16, 23);
+            this.btnMonthNext.TabIndex = 10;
+            this.btnMonthNext.Text = ">";
+            this.btnMonthNext.UseVisualStyleBackColor = true;
+            this.btnMonthNext.Click += new System.EventHandler(this.btnMonthNext_Click);
+            // 
+            // btnMonthPrev
+            // 
+            this.btnMonthPrev.Location = new System.Drawing.Point(494, 19);
+            this.btnMonthPrev.Name = "btnMonthPrev";
+            this.btnMonthPrev.Size = new System.Drawing.Size(16, 23);
+            this.btnMonthPrev.TabIndex = 9;
+            this.btnMonthPrev.Text = "<";
+            this.btnMonthPrev.UseVisualStyleBackColor = true;
+            this.btnMonthPrev.Click += new System.EventHandler(this.btnMonthPrev_Click);
             // 
             // ReferenceDate
             // 
@@ -104,7 +124,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 23);
+            this.label1.Location = new System.Drawing.Point(4, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 0;
@@ -113,7 +133,7 @@
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnClose.Location = new System.Drawing.Point(946, 550);
+            this.btnClose.Location = new System.Drawing.Point(946, 865);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 6;
@@ -138,7 +158,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Location = new System.Drawing.Point(12, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1009, 469);
+            this.groupBox1.Size = new System.Drawing.Size(1009, 784);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Kategorien zuweisen";
@@ -147,77 +167,91 @@
             // 
             this.listBox4.AllowDrop = true;
             this.listBox4.DisplayMember = "Subject";
+            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(671, 312);
+            this.listBox4.ItemHeight = 20;
+            this.listBox4.Location = new System.Drawing.Point(669, 552);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(326, 134);
+            this.listBox4.Size = new System.Drawing.Size(326, 204);
             this.listBox4.TabIndex = 19;
             // 
             // listBox5
             // 
             this.listBox5.AllowDrop = true;
             this.listBox5.DisplayMember = "Subject";
+            this.listBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(339, 312);
+            this.listBox5.ItemHeight = 20;
+            this.listBox5.Location = new System.Drawing.Point(337, 552);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(326, 134);
+            this.listBox5.Size = new System.Drawing.Size(326, 204);
             this.listBox5.TabIndex = 18;
             // 
             // listBox6
             // 
             this.listBox6.AllowDrop = true;
             this.listBox6.DisplayMember = "Subject";
+            this.listBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox6.FormattingEnabled = true;
-            this.listBox6.Location = new System.Drawing.Point(7, 312);
+            this.listBox6.ItemHeight = 20;
+            this.listBox6.Location = new System.Drawing.Point(5, 552);
             this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(326, 134);
+            this.listBox6.Size = new System.Drawing.Size(326, 204);
             this.listBox6.TabIndex = 17;
             // 
             // listBox3
             // 
             this.listBox3.AllowDrop = true;
             this.listBox3.DisplayMember = "Subject";
+            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(671, 147);
+            this.listBox3.ItemHeight = 20;
+            this.listBox3.Location = new System.Drawing.Point(669, 319);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(326, 134);
+            this.listBox3.Size = new System.Drawing.Size(326, 204);
             this.listBox3.TabIndex = 16;
             // 
             // listBox2
             // 
             this.listBox2.AllowDrop = true;
             this.listBox2.DisplayMember = "Subject";
+            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(339, 147);
+            this.listBox2.ItemHeight = 20;
+            this.listBox2.Location = new System.Drawing.Point(337, 319);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(326, 134);
+            this.listBox2.Size = new System.Drawing.Size(326, 204);
             this.listBox2.TabIndex = 15;
             // 
             // listBox1
             // 
             this.listBox1.AllowDrop = true;
             this.listBox1.DisplayMember = "Subject";
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(7, 147);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(5, 319);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(326, 134);
+            this.listBox1.Size = new System.Drawing.Size(326, 204);
             this.listBox1.TabIndex = 14;
             // 
             // SourceItemsList
             // 
             this.SourceItemsList.AllowDrop = true;
             this.SourceItemsList.DisplayMember = "Subject";
+            this.SourceItemsList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SourceItemsList.FormattingEnabled = true;
+            this.SourceItemsList.ItemHeight = 20;
             this.SourceItemsList.Location = new System.Drawing.Point(7, 20);
             this.SourceItemsList.Name = "SourceItemsList";
-            this.SourceItemsList.Size = new System.Drawing.Size(990, 108);
+            this.SourceItemsList.Size = new System.Drawing.Size(990, 264);
             this.SourceItemsList.TabIndex = 13;
             this.SourceItemsList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.AppointmentItemDoubleClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(671, 296);
+            this.label6.Location = new System.Drawing.Point(669, 536);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(197, 13);
             this.label6.TabIndex = 9;
@@ -226,7 +260,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(339, 296);
+            this.label7.Location = new System.Drawing.Point(337, 536);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(160, 13);
             this.label7.TabIndex = 8;
@@ -235,7 +269,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 296);
+            this.label8.Location = new System.Drawing.Point(4, 536);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(119, 13);
             this.label8.TabIndex = 7;
@@ -244,7 +278,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(671, 131);
+            this.label5.Location = new System.Drawing.Point(669, 303);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 13);
             this.label5.TabIndex = 3;
@@ -253,7 +287,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(339, 131);
+            this.label4.Location = new System.Drawing.Point(337, 303);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 13);
             this.label4.TabIndex = 2;
@@ -262,32 +296,12 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 131);
+            this.label3.Location = new System.Drawing.Point(4, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Gottesdienst/Taufe/Abendmahl";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // btnMonthPrev
-            // 
-            this.btnMonthPrev.Location = new System.Drawing.Point(494, 19);
-            this.btnMonthPrev.Name = "btnMonthPrev";
-            this.btnMonthPrev.Size = new System.Drawing.Size(16, 23);
-            this.btnMonthPrev.TabIndex = 9;
-            this.btnMonthPrev.Text = "<";
-            this.btnMonthPrev.UseVisualStyleBackColor = true;
-            this.btnMonthPrev.Click += new System.EventHandler(this.btnMonthPrev_Click);
-            // 
-            // btnMonthNext
-            // 
-            this.btnMonthNext.Location = new System.Drawing.Point(722, 19);
-            this.btnMonthNext.Name = "btnMonthNext";
-            this.btnMonthNext.Size = new System.Drawing.Size(16, 23);
-            this.btnMonthNext.TabIndex = 10;
-            this.btnMonthNext.Text = ">";
-            this.btnMonthNext.UseVisualStyleBackColor = true;
-            this.btnMonthNext.Click += new System.EventHandler(this.btnMonthNext_Click);
             // 
             // DlgCategorize
             // 
@@ -295,7 +309,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1030, 583);
+            this.ClientSize = new System.Drawing.Size(1030, 900);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox2);

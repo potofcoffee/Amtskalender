@@ -45,12 +45,12 @@ namespace Amtskalender
             endDate.MaxDate = DateTime.Today;
 
             foreach (MAPIFolder Folder in Globals.ThisAddIn.Calendars.GetAll()) this.calendars.Add(Folder);
-            
-            MAPIFolder defaultCalendar = Globals.ThisAddIn.Application.Session.GetDefaultFolder(OlDefaultFolders.olFolderCalendar);
+
+            MAPIFolder defaultCalendar = Globals.ThisAddIn.Calendars.GetDefault();
             foreach (MAPIFolder calendar in this.calendars)
             {
                 int idx = this.calendarList.Items.Add(calendar.Name + " (" + calendar.Store.DisplayName + ")");
-                if (defaultCalendar == calendar) this.calendarList.SetItemChecked(idx, true);
+                if ((defaultCalendar.Name == calendar.Name) && (defaultCalendar.Store.DisplayName == calendar.Store.DisplayName)) this.calendarList.SetItemChecked(idx, true);
             }
         }
 
@@ -87,5 +87,9 @@ namespace Amtskalender
             return this.endDate.Value;
         }
 
+        private void calendarList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

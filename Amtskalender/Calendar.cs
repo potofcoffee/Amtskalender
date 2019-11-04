@@ -44,5 +44,18 @@ namespace Amtskalender
             return Items;
 
         }
+
+        public void DeleteBirthdays()
+        {
+            List<Outlook.AppointmentItem> Items = new List<Outlook.AppointmentItem>();
+            foreach (Outlook.AppointmentItem Item in Folder.Items)
+            {
+                if (Item.Subject.StartsWith("Geburtstag von"))
+                {
+                    Items.Add(Item);
+                }
+            }
+            foreach (Outlook.AppointmentItem Item in Items) Item.Delete();
+        }
     }
 }

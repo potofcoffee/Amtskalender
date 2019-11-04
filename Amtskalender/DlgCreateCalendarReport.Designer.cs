@@ -111,6 +111,7 @@
             this.calendarList.Size = new System.Drawing.Size(567, 289);
             this.calendarList.Sorted = true;
             this.calendarList.TabIndex = 0;
+            this.calendarList.SelectedIndexChanged += new System.EventHandler(this.calendarList_SelectedIndexChanged);
             // 
             // btnDoCreate
             // 
