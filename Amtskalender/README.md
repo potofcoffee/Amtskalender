@@ -7,28 +7,26 @@ Autor: Pfarrer Christoph Fischer, christoph.fischer@elkw.de.
 Lizenz: GNU General Public License (GPL), Version 3.0 oder höher (siehe [LICENSE](LICENSE))
 
 # Beschreibung
-Dieses Addin fügt zu Microsoft Outlook zwei neue Toolbareinträge hinzu. Mit diesen lassen sich 
-Kalendereinträge Kategorien zuordnen, die den Dienstbereichen im Amtskalender der ELKW entsprechen. 
+Dieses Addin fügt zu Microsoft Outlook zwei neue Toolbareinträge hinzu. Mit diesen lassen sich
+Kalendereinträge Kategorien zuordnen, die den Dienstbereichen im Amtskalender der ELKW entsprechen.
 Außerdem lassen sich Termine beliebiger Kalender und Monate in ein Word-Dokument exportieren, das den
 monatlichen Übersichten im Amtskalender entspricht.
 
 Die Grundidee, ist, dass ein Pfarrer alle relevanten Termine in seinen eigenen Sharepointkalender überträgt
-und sie, sofern es passt, einem der sechs Dienstbereiche zuordnet. In diesem Fall kann der komplett 
+und sie, sofern es passt, einem der sechs Dienstbereiche zuordnet. In diesem Fall kann der komplett
 ausgefüllte Amtskalender für einen Monat anschließend einfach exportiert werden.
 
 # Voraussetzungen
 - Microsoft Office 2016 oder höher mit Word und Outlook
 - .NET Runtime 4.6.1. oder höher
 
-Die auf den Dienstrechnern der Evangelischen Landeskirche in Württemberg ("PC im Pfarramt") 
+Die auf den Dienstrechnern der Evangelischen Landeskirche in Württemberg ("PC im Pfarramt")
 vorinstallierte Software sollte im Allgemeinen als Voraussetzung ausreichen.
 
 # Installation
-TBD
-
-Im Moment gibt es noch keinen funktionsfähigen Installer. Die 
-Verwendung des Addins ist daher nur mit einer Installation von
-Microsoft Visual Studio möglich.
+Zur Installation laden Sie von der [Releases](Releases)-Seite das Setup für die aktuelle Version herunter. Damit wird das
+Addin auf Ihrem PC installiert. Beim nächsten Start von Outlook erhalten Sie evtl. eine Sicherheitsabfrage, ob Sie das
+Addin wirklich installieren wollen. Bitte bestätigen Sie diese Abfrage.
 
 # Verwendung
 
@@ -43,9 +41,9 @@ Kategorien für Kalendereinträge erzeugt:
 - Amtskalender: Bibelarbeit/Erwachsenenbildung
 - Amtskalender: Unterricht/Jugendarbeit
 
-Diese können nun wie gewohnt manuell oder über den 
-Toolbareintrag "Kategorisieren" im neuen Reiter "Kirchentools" 
-zugewiesen werden. Beim Klick auf diesen Eintrag öffnet sich 
+Diese können nun wie gewohnt manuell oder über den
+Toolbareintrag "Kategorisieren" im neuen Reiter "Kirchentools"
+zugewiesen werden. Beim Klick auf diesen Eintrag öffnet sich
 folgendes Fenster:
 
 ![Dialog "Termine kategorisieren"](docs/images/DlgCategorize.png)
@@ -62,13 +60,13 @@ Ein Doppelklick auf einen Termin öffnet diesen zur Bearbeitung.
 Ein Klick auf "Schließen" beendet die Kategorisierung und schließt
 das Fenster.
 
-*_Hinweis:_ Die Kategorisierung ist der einzige Bereich des Addins, der 
+*_Hinweis:_ Die Kategorisierung ist der einzige Bereich des Addins, der
 vorhandene Kalenderdaten verändert (d.h. Kategorien zuweist oder
 löscht).*
 
 ## Amtskalender erstellen
 
-Ein Klick auf "Erstellen" im Bereich "Amtskalender" des neuen 
+Ein Klick auf "Erstellen" im Bereich "Amtskalender" des neuen
 Toolbarreiters "Kirchentools" öffnet das Fenster "Amtskalender erstellen":
 
 ![Dialog "Amtskalender erstellen"](docs/images/DlgCreateCalendarReport.png)
@@ -77,7 +75,7 @@ Im oberen Bereich dieses Fensters kann der zu erstellende
 Zeitraum ausgewählt werden. Dabei werden nur ganze Monate berücksichtigt.
 
 Im unteren Bereich des Fensters können die zu verwendenden
-Outlook-Kalender gewählt werden. 
+Outlook-Kalender gewählt werden.
 
 Ein Klick auf "Erstellen" öffnet ein neues Microsoft-Word-Dokument,
 das mit den gewählten Daten gefüllt wird.
@@ -100,8 +98,8 @@ ist noch nicht implementiert.
 ## Doppelte Kategoriezuweisung
 Bei einer manuellen Kategorisierung ist es möglich, einen Termin
 mehreren Amtskalender-Kategorien zuzuweisen. Bei der Erstellung des
-Amtskalenders werden die Kategorien in folgender Reihenfolge 
-überprüft: 
+Amtskalenders werden die Kategorien in folgender Reihenfolge
+überprüft:
 
 1. Amtskalender: Gottesdienst/Taufe/Abendmahl
 1. Amtskalender: Amtshandlungen
@@ -120,7 +118,7 @@ für weitere Funktionen können gerne auf GitHub als "Issue" hinterlegt
 werden.
 
 Das Addin befindet sich im Entwicklungszustand und wird vom
-Benutzer auf eigene Gefahr verwendet. 
+Benutzer auf eigene Gefahr verwendet.
 
 ### Aktuelle Roadmap
 - [ ] Automatische Kategorisierung nach Regeln
