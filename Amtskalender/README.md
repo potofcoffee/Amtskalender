@@ -122,4 +122,3 @@ Benutzer auf eigene Gefahr verwendet.
 
 ### Aktuelle Roadmap
 - [ ] Automatische Kategorisierung nach Regeln
-- [ ] Setup-Programm zur eigenständigen Installation ohne Microsoft Visual Studio
