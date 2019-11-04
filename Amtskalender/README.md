@@ -24,7 +24,7 @@ Die auf den Dienstrechnern der Evangelischen Landeskirche in Württemberg ("PC i
 vorinstallierte Software sollte im Allgemeinen als Voraussetzung ausreichen.
 
 # Installation
-Zur Installation laden Sie von der [Releases](Releases)-Seite das Setup für die aktuelle Version herunter. Damit wird das
+Zur Installation laden Sie von der [Releases](../../../releases)-Seite das Setup für die aktuelle Version herunter. Damit wird das
 Addin auf Ihrem PC installiert. Beim nächsten Start von Outlook erhalten Sie evtl. eine Sicherheitsabfrage, ob Sie das
 Addin wirklich installieren wollen. Bitte bestätigen Sie diese Abfrage.
 
